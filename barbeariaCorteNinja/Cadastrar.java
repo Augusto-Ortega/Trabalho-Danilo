@@ -18,6 +18,8 @@ class Cadastrar {
     System.out.println("Deseja gravar os dados? (sim) ou (não)");
     String confirmaGrav = leitor.nextLine();
 
+    leitor.close();
+
     if (confirmaGrav.equals("sim")){
         Gravar.setTexto(nomeUsu);
         Gravar.main(null);

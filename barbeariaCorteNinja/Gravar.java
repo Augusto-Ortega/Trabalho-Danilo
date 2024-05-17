@@ -1,6 +1,8 @@
 package barbeariaCorteNinja;
 
-
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.io.FileWriter; 
 import java.io.IOException;
 
@@ -18,8 +20,26 @@ public class Gravar {
         }
       }
 
+
+
       public static void setTexto(String novoTexto) {
-        texto = novoTexto + "\n";
+
+
+        // Obtém a data atual do sistema
+        LocalDate dataAtual = LocalDate.now();
+
+        // Obtém a hora atual do sistema
+        LocalTime horaAtual = LocalTime.now();
+
+         // Define os formatos desejados para data e hora
+        DateTimeFormatter formatoData = DateTimeFormatter.ofPattern("dd/MM/yy");
+        DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm");
+
+        // Formata a data e a hora de acordo com os formatos definidos
+        String dataFormatada = dataAtual.format(formatoData);
+        String horaFormatada = horaAtual.format(formatoHora);
+
+        texto = novoTexto + "||"+ dataFormatada+"||"+ horaFormatada +"\n";
     }
 
       private static String texto = "Arquivos em java pode ser interessante\n";
