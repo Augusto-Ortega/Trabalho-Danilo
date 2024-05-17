@@ -17,9 +17,9 @@ public class Gravar {
           e.printStackTrace();
         }
       }
-      
+
       public static void setTexto(String novoTexto) {
-        texto = novoTexto;
+        texto = novoTexto + "\n";
     }
 
       private static String texto = "Arquivos em java pode ser interessante\n";
