@@ -1,0 +1,3 @@
+
+Arquivos em java pode ser interessante
+Novo texto definido por outra classe!
