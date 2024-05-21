@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class LerArquivo {
   public static void main(String[] args) {
-    String clienteProcurado = "Luis";  // Especifique o nome do cliente que você quer encontrar
+    String clienteProcurado = "Vitoria Moretto";  // Especifique o nome do cliente que você quer encontrar
 
     boolean clienteEncontrado = false;
 

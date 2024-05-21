@@ -6,15 +6,15 @@ import java.io.IOException;
 public class CriarArquivo {
   public static void main(String[] args) {
     try {
-      File myObj = new File("dados.txt");
-      if (myObj.createNewFile()) {
-        System.out.println("File created: " + myObj.getName());
+      File arquivo = new File("dados.txt");
+      if (arquivo.createNewFile()) {
+        System.out.println("Arquivo criado com sucesso: " + arquivo.getName());
       } else {
-        System.out.println("File already exists.");
+        System.out.println("O arquivo já existe");
       }
-    } catch (IOException e) {
-      System.out.println("An error occurred.");
-      e.printStackTrace();
+    } catch (IOException erro) {
+      System.out.println("Um erro aconteceu.");
+      erro.printStackTrace();
     }
   }
 }

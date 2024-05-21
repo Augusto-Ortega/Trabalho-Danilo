@@ -9,6 +9,6 @@ public class Editar {
         // Modificando o valor da variável texto através do setter
         Gravar.setTexto("Novo texto definido por outra classe!");
         Gravar.main(null);
-        System.out.println("teste");
+        System.out.println("Teste");
     }
 }
