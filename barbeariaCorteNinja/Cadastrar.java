@@ -1,13 +1,12 @@
 package barbeariaCorteNinja;
 
-
-import java.util.Scanner;  // Import the Scanner class
+import java.util.Scanner;
 
 class Cadastrar {
   public static void main(String[] args) {
-    Scanner leitor = new Scanner(System.in); 
-    System.out.println("Entre com o nome e sobrenonome do cliente:");
-    String nomeUsu = leitor.nextLine();  
+    Scanner leitor = new Scanner(System.in);
+    System.out.println("Entre com o nome e sobrenome do cliente:");
+    String nomeUsu = leitor.nextLine();
 
     System.out.println("Entre com o Email do usuário:");
     String emailUsu = leitor.nextLine();
@@ -18,9 +17,11 @@ class Cadastrar {
     System.out.println("Deseja gravar os dados? (sim) ou (não)");
     String confirmaGrav = leitor.nextLine();
 
-    leitor.close();
-
-    if (confirmaGrav.equals("sim")){
+    if (confirmaGrav.equalsIgnoreCase("sim")) {
+      // Verificar se o nome do cliente já está cadastrado usando LerArquivo
+      if (LerArquivo.isNomeCadastrado(nomeUsu)) {
+        System.out.println("falha na execução: Nome já cadastrado no sitema.");
+      } else {
         Gravar.setTexto(nomeUsu);
         Gravar.main(null);
 
@@ -29,6 +30,9 @@ class Cadastrar {
 
         Gravar.setTexto(numUsu);
         Gravar.main(null);
+      }
     }
+
+    leitor.close();
   }
 }
