@@ -6,7 +6,7 @@ import java.util.Scanner;  // Import the Scanner class
 class Cadastrar {
   public static void main(String[] args) {
     Scanner leitor = new Scanner(System.in); 
-    System.out.println("Entre com o nome de Usuário:");
+    System.out.println("Entre com o nome e sobrenonome do cliente:");
     String nomeUsu = leitor.nextLine();  
 
     System.out.println("Entre com o Email do usuário:");

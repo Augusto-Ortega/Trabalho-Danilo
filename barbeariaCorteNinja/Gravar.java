@@ -42,7 +42,7 @@ public class Gravar {
         texto = novoTexto + "||"+ dataFormatada+"||"+ horaFormatada +"\n";
     }
 
-      private static String texto = "Arquivos em java pode ser interessante\n";
+      private static String texto = "\n";
       
     }
 
