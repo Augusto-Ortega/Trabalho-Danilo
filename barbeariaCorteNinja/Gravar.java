@@ -34,9 +34,9 @@ public class Gravar {
             escrever.write(texto);  // Usa a variável estática texto
             escrever.close();
             System.out.println("Gravado com sucesso no arquivo!");
-        } catch (IOException e) {
+        } catch (IOException erro) {
             System.out.println("Um erro aconteceu: ");
-            e.printStackTrace();
+            erro.printStackTrace();
         }
     }
 }

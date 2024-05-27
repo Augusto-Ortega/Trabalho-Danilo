@@ -8,19 +8,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Eliminar {
-    public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in);
-        System.out.println("Entre com o nome do cliente que deseja excluir:");
-        String nomeExcluir = leitor.nextLine();
-        leitor.close();
-
-        if (excluirCliente(nomeExcluir)) {
-            System.out.println("Cliente " + nomeExcluir + " excluído com sucesso.");
-        } else {
-            System.out.println("Cliente " + nomeExcluir + " não encontrado.");
-        }
-    }
-
     public static boolean excluirCliente(String nome) {
         File arquivo = new File("dados.txt");
         ArrayList<String> linhas = new ArrayList<>();
