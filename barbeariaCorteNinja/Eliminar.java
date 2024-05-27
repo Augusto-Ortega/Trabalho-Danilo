@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Eliminar {
-    public static boolean excluirCliente(String nome) {
+    protected static boolean excluirCliente(String nome) {
         File arquivo = new File("dados.txt");
         ArrayList<String> linhas = new ArrayList<>();
         boolean encontrado = false;
@@ -27,9 +27,9 @@ public class Eliminar {
                     linhas.add(linha);
                 }
             }
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException erro) {
             System.out.println("Arquivo não encontrado.");
-            e.printStackTrace();
+            erro.printStackTrace();
             return false;
         }
 
@@ -38,9 +38,9 @@ public class Eliminar {
             for (String linha : linhas) {
                 escritor.write(linha + "\n");
             }
-        } catch (IOException e) {
+        } catch (IOException erro) {
             System.out.println("Um erro aconteceu ao gravar no arquivo.");
-            e.printStackTrace();
+            erro.printStackTrace();
             return false;
         }
 

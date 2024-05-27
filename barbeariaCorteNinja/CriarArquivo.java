@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class CriarArquivo {
-    public static void criar() {
+    protected static void criar() {
         try {
             File arquivo = new File("dados.txt");
             if (arquivo.createNewFile()) {

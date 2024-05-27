@@ -37,9 +37,9 @@ public class LerArquivo {
             if (!clienteEncontrado) {
                 System.out.println("Cliente " + clienteProcurado + " não encontrado.");
             }
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException erro) {
             System.out.println("Algum erro ocorreu.");
-            e.printStackTrace();
+            erro.printStackTrace();
         }
     }
 
@@ -59,9 +59,9 @@ public class LerArquivo {
             }
 
             meuLeitor.close();
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException erro) {
             System.out.println("Arquivo não encontrado.");
-            e.printStackTrace();
+            erro.printStackTrace();
         }
 
         return false;
